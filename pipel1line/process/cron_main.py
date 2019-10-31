@@ -58,7 +58,7 @@ def moveFiles():
     os.system("docker cp /home/wild_project/py/ha/cr0n/meh/ftpy.py cronak:/home")
     os.system("docker cp /home/wild_project/py/ha/cr0n/meh/insert_some.py cronak:/home")
     os.system("docker cp /home/wild_project/py/ha/cr0n/meh/ccc.py cronak:/home")
-    os.system("docker exec cronak chown +x /home/insert_some.py")
+    os.system("docker exec cronak chmod +x /home/insert_some.py")
               
 
 def main():
