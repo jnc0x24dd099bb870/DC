@@ -4,6 +4,16 @@ import docker
 import os, subprocess
 import sys, six
 
+
+def create_folder():
+    folder="/home/wild_project/py/ha/cr0n/meh"
+    if not os.path.exists(folder):
+        print("folder does not exist... creating...")
+        os.makedirs(folder)
+    else:
+        print("folder exists...")
+        
+        
 from script_dba import dba_script
 from script_ftp import ftp_script
 from script_cron import cron_script
@@ -62,6 +72,7 @@ def moveFiles():
               
 
 def main():
+   create_folder()
    ftp_script()
    cron_script()
    cred_script()
