@@ -12,5 +12,6 @@ installing_services.Services().docker_installing()
 source_update.install()
 
 install_k8s.Install().pip_client()
+#install_k8s.Install().ins()
 
 #still in progress, though... need to set-up others, like network
