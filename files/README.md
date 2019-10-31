@@ -7,11 +7,11 @@
 4) creating a script for finding duplicates (that will exist inside the container), by comparing
    processed and not_processed files (given any path)
 
-<p>This environment expects the files (that must be compared for duplicates) to be put under  /home/hnotparsed
+<p>This environment expects the files (that must be compared for duplicates) to be put under  /home/hnotparsed.
 From there (because of the mount binding), all data can be accessed and processed inside container, /home/cnotparsed, 
 with script_2_process.py. 
 Processed data with script_2_process.py will be put under /home/cparsed. 
-From there, it can be immediately accessed from /home/hparsed.</p>
+Once processed, it can be immediately accessed from /home/hparsed.</p>
 
 Processed data example:
 
