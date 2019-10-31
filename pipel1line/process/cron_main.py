@@ -43,9 +43,9 @@ def CreateContainerCron():
     print("starting to build container")
     client = docker.APIClient(base_url='unix://var/run/docker.sock')
     
-    container_id = client.create_container('croney', name='cronak', ports=[2323, 2324],
+    container_id = client.create_container('croney', name='cronak', ports=[2121, 2122],
                                         stdin_open=True, tty=True,
-                                        host_config=client.create_host_config(port_bindings= { 2323: 2324}),
+                                        host_config=client.create_host_config(port_bindings= { 2121: 2122}),
                                         command='/bin/sh',
                                         detach=True )
 
