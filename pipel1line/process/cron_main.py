@@ -7,6 +7,7 @@ import sys, six
 from script_dba import dba_script
 from script_ftp import ftp_script
 from script_cron import cron_script
+from script_cred import cred_script
 
 
 def BuildImage():
@@ -56,11 +57,14 @@ def moveFiles():
     os.system("docker exec cronak chmod 0644 /etc/cron.d/dba-cron")
     os.system("docker cp /home/wild_project/py/ha/cr0n/meh/ftpy.py cronak:/home")
     os.system("docker cp /home/wild_project/py/ha/cr0n/meh/insert_some.py cronak:/home")
-    
+    os.system("docker cp /home/wild_project/py/ha/cr0n/meh/ccc.py cronak:/home")
+    os.system("docker exec cronak chown +x /home/insert_some.py")
+              
 
 def main():
    ftp_script()
    cron_script()
+   cred_script()
    BuildImage()
    CreateContainerCron()
    dba_script()
