@@ -2,6 +2,18 @@
 
 import os, subprocess
 
+def create_folder():
+    global folder
+    folder="/home/tron/wildtest/woohoo"
+    if not os.path.exists(folder):
+        print("folder does not exist... creating...")
+        os.makedirs(folder)
+    else:
+        print("folder exists...")
+
+create_folder()
+
+
 
 def dba_script():
     str="""#!/usr/bin/python3
@@ -55,7 +67,7 @@ if __name__ == '__main__':
     SQL().create_table() 
 """
 
-    h_h = open("/home/wild_project/py/ha/cr0n/meh/insert_some.py", "w")
+    h_h = open(folder+"/insert_some.py", "w")
     h_h.write(str)
     h_h.close()
 
