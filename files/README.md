@@ -63,4 +63,5 @@ root@323449e2c8:/home/cscriptparse# tree /home
 ```
 
 <p>Added Jupyter service inside container, 
-in case you want to perform any further analysis on the files.</p>
+in case you want to perform any further analysis on the files. It comes shipped with a notebook, and a small example,
+on how to run the script for finding duplicates.</p>
