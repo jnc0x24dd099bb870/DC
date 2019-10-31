@@ -1,0 +1,27 @@
+>>>>>
+>>>>> for folder "/home/tron/wildtest/woohoo/" 
+>>>>>
+>>>>> make sure you change the path accordingly
+>>>>>
+
+root@tr0n:/home/tr0n/wildtest/DC/pipel1line/process# ./cron_main.py 
+folder exists...
+folder exists...
+folder exists...
+folder exists...
+folder exists...
+[b'{"stream":"Step 1/16 : FROM ubuntu:16.04"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e b9409899fe86\\n"}\r\n', b'{"stream":"Step 2/16 : RUN touch /var/log/cron.log"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e 8c8d3269893a\\n"}\r\n', b'{"stream":"Step 3/16 : RUN apt-get update"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e b704c915223b\\n"}\r\n', b'{"stream":"Step 4/16 : RUN apt-get install curl -y"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e 0dfc799ab298\\n"}\r\n', b'{"stream":"Step 5/16 : RUN apt-get install build-essential -y"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e 3841cd2da8ff\\n"}\r\n', b'{"stream":"Step 6/16 : RUN apt-get install python3 -y"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e f80450009e26\\n"}\r\n', b'{"stream":"Step 7/16 : RUN apt-get install software-properties-common -y"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e 25576028d890\\n"}\r\n', b'{"stream":"Step 8/16 : RUN apt-get install python3-setuptools -y"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e 50419d10df00\\n"}\r\n', b'{"stream":"Step 9/16 : RUN apt-get install python3-pip -y"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e bc62a8bdb087\\n"}\r\n', b'{"stream":"Step 10/16 : RUN apt-get update"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e 5b2c6de1ea5c\\n"}\r\n', b'{"stream":"Step 11/16 : RUN pip3 install pymysql"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e 82e5cc8389fe\\n"}\r\n', b'{"stream":"Step 12/16 : RUN pip3 install mysql-connector-python"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e 16ac21778522\\n"}\r\n', b'{"stream":"Step 13/16 : RUN pip3 install sqlalchemy"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e 3d5ce62273ad\\n"}\r\n', b'{"stream":"Step 14/16 : RUN pip3 install pandas"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e 56635c5a7eaf\\n"}\r\n', b'{"stream":"Step 15/16 : RUN apt-get -y install cron"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e 98b4d0b0a0cc\\n"}\r\n', b'{"stream":"Step 16/16 : CMD cron \\u0026\\u0026 tail -f /var/log/cron.log"}\r\n', b'{"stream":"\\n"}\r\n', b'{"stream":" ---\\u003e Using cache\\n"}\r\n', b'{"stream":" ---\\u003e 02a57410f336\\n"}\r\n', b'{"aux":{"ID":"sha256:02a57410f336b54699d004815867cb6d0e866bce508ef3fbe32cde23c56c44a0"}}\r\n', b'{"stream":"Successfully built 02a57410f336\\n"}\r\n', b'{"stream":"Successfully tagged croney:latest\\n"}\r\n']
+      
+The Cron image is now built...
+starting to build container
+root@tron-VirtualBox:/home/tron/wildtest/DC/pipel1line/process# 
+root@tron-VirtualBox:/home/tron/wildtest/DC/pipel1line/process# 
+root@tron-VirtualBox:/home/tron/wildtest/DC/pipel1line/process# ls -ltr /home/tron/wildtest/
+DC/     woohoo/ 
+root@tr0n:/home/tr0n/wildtest/DC/pipel1line/process# ls -ltr /home/tron/wildtest/woohoo/
+total 16
+-rw-r--r-- 1 root root  426 Νοε   1 01:45 ftpy.py
+-rw-r--r-- 1 root root   54 Νοε   1 01:45 dba-cron
+-rw-r--r-- 1 root root  236 Νοε   1 01:45 ccc.py
+-rw-r--r-- 1 root root 1148 Νοε   1 01:45 insert_some.py
+root@tr0n:/home/tr0n/wildtest/DC/pipel1line/process#  
