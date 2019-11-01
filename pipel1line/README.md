@@ -92,5 +92,11 @@ day	temperature	windspeed	event
 1/3/2017	28	2	Snow
 ```
 
+Jupyter is installed on local machine - just as the ftp server. (the only services on containers are mysql &cronjob)
+Small test on how to access data from container:
+
+![ScreenShot](https://raw.githubusercontent.com/jnc0x24dd099bb870/DC/master/pipel1line/data/jup.png) 
+
+
 to be done: static IP for containers
 
