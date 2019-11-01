@@ -40,4 +40,4 @@ root@tr0n:/home/tron/hue/DC/pipel1line/process#  docker exec cronak service cron
 root@tr0n:/home/tron/hue/DC/pipel1line/process# docker exec cronak service cron status
  * cron is running
  ```
- 
+ For mysql container, use the official image, as per indications at <a href="https://dev.mysql.com/doc/mysql-installation-excerpt/5.5/en/docker-mysql-getting-started.html">MySQL link</a>
