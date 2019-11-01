@@ -49,7 +49,7 @@ root@tr0n:/home/waht#
 ```
 
 
-From there, the pipel1ne/process does as following:
+From there, the pipel1ne/process does as following (just run cron_main.py)
 
 a) creating containerized cronjob that will establish connection with ftp
 
@@ -78,7 +78,7 @@ FLUSH PRIVILEGES;
 ```
 
 Code is a bit hardcoded from a networking side (containers' IP), path for weather_data.csv file (feel free to change it),
-and MySQL dba (named "huehue")
+and MySQL passwd &dba (named "huehue")
 
 MySQL container mysql1 is 172.17.0.2 as per code.
 
