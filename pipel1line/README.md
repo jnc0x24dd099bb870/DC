@@ -76,3 +76,21 @@ GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost'  WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'  WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
+
+Code is a bit hardcoded from a networking side (containers' IP), path for weather_data.csv file (feel free to change it),
+and MySQL dba (named "huehue")
+
+MySQL container mysql1 is 172.17.0.2 as per code.
+
+On MySQL side, after running the mentioned scripts
+```
+root@tr0n:/home/tron/wildtest/DC/pipel1line/process# docker exec mysql1 mysql -u root -pabc123 -e "use huehue; select * from hall0ween;"
+mysql: [Warning] Using a password on the command line interface can be insecure.
+day	temperature	windspeed	event
+1/1/2017	32	6	Rain
+1/2/2017	35	7	Sunny
+1/3/2017	28	2	Snow
+```
+
+to be done: static IP for containers
+
