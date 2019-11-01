@@ -2,6 +2,8 @@
 
 import os
 
+from test_folder import Folder
+
 def create_folder():
     global folder
     folder="/home/tron/wildtest/woohoo"
@@ -39,6 +41,6 @@ d1=Dba()
 
 """
 
-    m_m = open(folder+"/ccc.py", "w")
+    m_m = open(Folder.folder+"/ccc.py", "w")
     m_m.write(str)
     m_m.close()
