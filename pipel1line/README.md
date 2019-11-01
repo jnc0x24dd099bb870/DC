@@ -22,9 +22,34 @@ The data flow has 3 components:
 *Build environment*
 
 Part 1) and 2) is implemented by programs (main program: cron_main.py) under pipel1line/process and pipel1line/ftp.
+
 The pipel1line/ftp program will allow you to run locally a small ftp server that will provide the weather_data.csv data.
 
-From there, the pipel1ne/process is as following:
+Suppose my ftp script &weather_data.csv are under /home/cons:
+```
+root@tr0n:/home/cons# ls /home/cons
+heh.py  stuff.txt weather_data.csv
+````
+Run script:
+```
+root@tr0n:/home/cons# strace ./heh.py 
+execve("./heh.py", ["./heh.py"], 0x7ffea90803f0 /* 31 vars */) = 0
+[....snip....]
+getpid()                                = 4474
+write(3, "INFO:pyftpdlib:passive ports: No"..., 35) = 35
+epoll_wait(4, 
+````
+Check if all good:
+
+```
+root@tr0n:/home/waht# lsof -i :2121
+COMMAND  PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+heh.py  4474 root    5u  IPv4 3035277      0t0  TCP *:iprop (LISTEN)
+root@tr0n:/home/waht# 
+```
+
+
+From there, the pipel1ne/process does as following:
 
 a) creating containerized cronjob that will establish connection with ftp
 
