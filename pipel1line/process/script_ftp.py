@@ -4,6 +4,8 @@ import docker
 import os, subprocess
 import sys, six
 
+from test_folder import Folder
+
 from script_dba import dba_script
 
 def ftp_script():
@@ -34,7 +36,7 @@ ftp.quit()
 os.system("cp /root/weather_data.csv /home/")
 """
 
-    f_f = open("/home/wild_project/py/ha/cr0n/meh/ftpy.py", "w")
+    f_f = open(Folder.folder+"/ftpy.py", "w")
     f_f.write(str)
     f_f.close()
 
