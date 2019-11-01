@@ -5,14 +5,7 @@ import os, subprocess
 import sys, six
 
 
-def create_folder():
-    folder="/home/wild_project/py/ha/cr0n/meh"
-    if not os.path.exists(folder):
-        print("folder does not exist... creating...")
-        os.makedirs(folder)
-    else:
-        print("folder exists...")
-        
+from test_folder import Folder   
         
 from script_dba import dba_script
 from script_ftp import ftp_script
@@ -63,11 +56,11 @@ def CreateContainerCron():
     client.start(container_id)
 
 def moveFiles():
-    os.system("docker cp %s/dba-cron cronak:/etc/cron.d/" % (folder))
+    os.system("docker cp %s/dba-cron cronak:/etc/cron.d/" % (Folder.folder))
     os.system("docker exec cronak chmod 0644 /etc/cron.d/dba-cron")
-    os.system("docker cp %s/ftpy.py cronak:/home" % (folder))
-    os.system("docker cp %s/insert_some.py cronak:/home"  % (folder))
-    os.system("docker cp %s/ccc.py cronak:/home" % (folder))
+    os.system("docker cp %s/ftpy.py cronak:/home" % (Folder.folder))
+    os.system("docker cp %s/insert_some.py cronak:/home"  % (Folder.folder))
+    os.system("docker cp %s/ccc.py cronak:/home" % (Folder.folder))
     os.system("docker exec cronak chmod +x /home/insert_some.py")
               
 
