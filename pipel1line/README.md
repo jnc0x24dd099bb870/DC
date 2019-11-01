@@ -27,7 +27,7 @@ b) retriving the weather_data.csv
 c) storing dataframes into mysql
 
 For point a) you will have to run manually the command "service cron start" for the cronk container
-
+```
 root@tr0n:/home/tron/hue/DC/pipel1line/process# docker exec cronak service cron status
  * cron is not running
 root@tr0n:/home/tron/hue/DC/pipel1line/process#  docker exec cronak service cron start
@@ -35,5 +35,5 @@ root@tr0n:/home/tron/hue/DC/pipel1line/process#  docker exec cronak service cron
    ...done.
 root@tr0n:/home/tron/hue/DC/pipel1line/process# docker exec cronak service cron status
  * cron is running
- 
+ ```
  
