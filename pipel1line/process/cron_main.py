@@ -65,7 +65,6 @@ def moveFiles():
               
 
 def main():
-   create_folder()
    ftp_script()
    cron_script()
    cred_script()
