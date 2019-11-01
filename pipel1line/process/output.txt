@@ -25,10 +25,11 @@ root@tr0n:/home/tr0n/wildtest/DC/pipel1line/process#
 root@tr0n:/home/tr0n/wildtest/DC/pipel1line/process#  docker ps | grep cronak
 59mn231e1b34        croney                      "/bin/sh"                15 seconds ago      Up 12 seconds           2122/tcp, 0.0.0.0:2122->2121/tcp                  cronak
 root@tr0n:/home/tr0n/wildtest/DC/pipel1line/process# 
-root@tr0n:/home/tr0n/wildtest/DC/pipel1line/process#  docker exec cronak ls /home
-ccc.py
-ftpy.py
-insert_some.py
+root@tr0n:/home/tr0n/wildtest/DC/pipel1line/process# docker exec cronak ls -ltr /home
+total 12
+-rw-r--r-- 1 root root  426 Nov  1 00:45 ftpy.py
+-rw-r--r-- 1 root root  236 Nov  1 00:45 ccc.py
+-rwxr-xr-x 1 root root 1148 Nov  1 00:45 insert_some.py
 root@tr0n:/home/tr0n/wildtest/DC/pipel1line/process# 
 root@tr0n:/home/tr0n/wildtest/DC/pipel1line/process#  docker exec cronak ls /etc/cron.d/
 dba-cron
