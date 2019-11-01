@@ -21,7 +21,8 @@ The data flow has 3 components:
 
 *Build environment*
 
-Part 1) and 2) is implemented by programs (main program: cron_main.py) under pipel1line/process
+Part 1) and 2) is implemented by programs (main program: cron_main.py) under pipel1line/process:
+
 a) creating containerized cronjob that will establish connection with ftp
 b) retriving the weather_data.csv
 c) storing dataframes into mysql
