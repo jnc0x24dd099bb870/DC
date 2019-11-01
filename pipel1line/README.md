@@ -92,12 +92,14 @@ day	temperature	windspeed	event
 1/3/2017	28	2	Snow
 ```
 
-Jupyter is installed on local machine - just as the ftp server. (the only services on containers are mysql &cronjob)
+Jupyter is installed on local machine - just as the ftp server. (the only services on containers are mysql &cronjob).
+
+Follow <a href="https://hostadvice.com/how-to/how-to-install-jupyter-notebook-on-ubuntu-18-04-vps-or-dedicated-server/">link</a> for installing Jupyter locally. (no code for this part)
 
 Small test on how to access data from container:
 
 ![ScreenShot](https://raw.githubusercontent.com/jnc0x24dd099bb870/DC/master/pipel1line/data/jup.png) 
 
 
-to be done: static IP for containers
+to be done: static IP for containers & port jupyter to a container
 
