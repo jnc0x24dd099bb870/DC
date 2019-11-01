@@ -24,8 +24,11 @@ The data flow has 3 components:
 Part 1) and 2) is implemented by programs (main program: cron_main.py) under pipel1line/process:
 
 a) creating containerized cronjob that will establish connection with ftp
+
 b) retriving the weather_data.csv
-c) storing dataframes into mysql
+
+c) storing dataframes into mysql 
+
 
 For point a) you will have to run manually the command "service cron start" for the cronk container
 ```
