@@ -1,0 +1,44 @@
+version: '3.3'
+services:
+  guestbook:
+    image: test_image:latest
+    volumes:
+      - ./:/code
+    ports:
+      - "8080:5000"
+    environment:
+      REDIS_HOST: redis
+      MYSQL_DATABASE_USER: root
+      MYSQL_DATABASE_PASSWORD: /run/secrets/db_root_password
+      MYSQL_DATABASE_DB: website
+      MYSQL_DATABASE_HOST: mysql
+    networks:
+      - eded
+      
+  redis:
+    image: "redis:alpine"
+    networks:
+      - eded
+      
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - type: bind
+        source: /opt/docker/volumes/mysql
+        target: /var/lib/mysql
+    secrets:
+      - db_root_password
+    environment:
+      MYSQL_DATABASE: website
+      MYSQL_ROOT_PASSWORD: /run/secrets/db_root_password
+    networks:
+      - eded
+      
+secrets:
+  db_root_password:
+    external: true
+
+networks:
+  eded:
+    external: true
