@@ -1,0 +1,16 @@
+# staging 
+
+FROM python:3.4 AS staging
+ADD . /code
+WORKDIR /code
+RUN pip install -r requirements.txt
+
+# production
+
+FROM python:3.4
+ADD . /code
+WORKDIR /code
+RUN pip install -r requirements.txt
+
+COPY --from=staging /code /prod_code
+CMD ["python", "app.py"]
